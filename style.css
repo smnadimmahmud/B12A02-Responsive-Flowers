@@ -23,30 +23,61 @@ a {
   color: #ff6600;
 }
 
-/* === NAVBAR === */
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background-color: #f6f9fe;
+  padding: 1rem 1.2rem;
+  background-color: #f8f9fc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
 }
 
 .logo {
-  height: 50px;
+  width: 120px;
+  height: auto;
 }
 
-nav a {
-  margin: 0 15px;
+/* Navigation links (only visible on desktop) */
+.nav-links {
+  display: none;
+}
+
+.cart {
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 16px;
+  color: #000;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .cart {
+    font-size: 1.1rem;
+  }
 }
 
 nav .cart {
   font-weight: bold;
 }
 
-/* === HERO SECTION === */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -76,7 +107,6 @@ nav .cart {
   max-width: 100%;
 }
 
-/* === PRODUCTS SECTION === */
 .products {
   text-align: center;
   padding: 60px 40px;
@@ -145,7 +175,6 @@ nav .cart {
   background-color: #e65400;
 }
 
-/* Flower Lover Section */
 .flower-lover {
   padding: 60px;
   background-color: #f6f9fe;
@@ -159,7 +188,6 @@ nav .cart {
   gap: 30px;
 }
 
-/* Product card reuse */
 .flower-product .product-card {
   background: white;
   border-radius: 10px;
@@ -194,7 +222,6 @@ nav .cart {
   background-color: #e65400;
 }
 
-/* Main Content Area */
 .flower-main {
   position: relative;
   flex: 1;
@@ -219,7 +246,6 @@ nav .cart {
   z-index: 2;
 }
 
-/* Text Overlay */
 .flower-text-overlay {
   position: absolute;
   top: 0;
@@ -245,8 +271,6 @@ nav .cart {
   color: #eaeaea;
 }
 
-
-/* Deals Section */
 .deals-section {
   text-align: center;
   padding: 3rem 1rem;
@@ -279,21 +303,18 @@ nav .cart {
   align-items: stretch;
 }
 
-/* Left side: 2 stacked cards */
 .left-deals {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Right side: 1 large card */
 .right-deals {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Deal Cards */
 .deal-card {
   position: relative;
   border-radius: 12px;
@@ -333,7 +354,6 @@ nav .cart {
   height: 340px;
 }
 
-/* Center the Zabo text */
 .deal-card.large .deal-text {
   top: 50%;
   left: 50%;
@@ -348,7 +368,6 @@ nav .cart {
   font-size: 1.1rem;
 }
 
-/* === NEWSLETTER SECTION === */
 .newsletter {
   position: relative;
   margin-top: 60px;
@@ -401,7 +420,7 @@ nav .cart {
   cursor: pointer;
 }
 
-/* === FOOTER SECTION === */
+
 footer {
   display: flex;
   flex-wrap: wrap;
