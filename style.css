@@ -250,80 +250,103 @@ nav .cart {
 .deals-section {
   text-align: center;
   padding: 3rem 1rem;
+  background-color: #f6f8fd;
 }
 
 .deals-section h2 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.highlight {
-  color: #ff6600;
-  font-weight: bold;
+.deals-section .highlight {
+  color: #f26522; /* Orange highlight */
 }
 
 .deals-section p {
+  color: #666;
+  font-size: 1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #555;
+  line-height: 1.6;
 }
 
 .deals-layout {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
+/* Left side: 2 stacked cards */
 .left-deals {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
+/* Right side: 1 large card */
 .right-deals {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+/* Deal Cards */
 .deal-card {
   position: relative;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 10px;
-  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  height: 160px;
 }
 
 .deal-card img {
   width: 100%;
-  border-radius: 10px;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .deal-text {
   position: absolute;
-  color: white;
   bottom: 1rem;
   left: 1rem;
-  text-shadow: 1px 1px 3px black;
-}
-
-.deal-text h3 {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  font-weight: bold;
   font-size: 1rem;
-  margin: 0;
 }
 
 .deal-text p {
-  margin: 0;
+  margin-top: 0.3rem;
   font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: underline;
 }
 
-.large {
-  width: 350px;
+/* Large Zabo Card */
+.deal-card.large {
+  width: 680px;
+  height: 340px;
 }
 
+/* Center the Zabo text */
+.deal-card.large .deal-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  text-align: center;
+  font-size: 1.6rem;
+}
 
+.deal-card.large .deal-text p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
 
 /* === NEWSLETTER SECTION === */
 .newsletter {
