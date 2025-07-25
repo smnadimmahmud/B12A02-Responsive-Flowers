@@ -448,3 +448,68 @@ footer {
   width: 30px;
   height: 30px;
 }
+/* ===================== RESPONSIVENESS ===================== */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flower-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flower-main {
+    max-width: 100%;
+  }
+
+  .deals-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deal-card.large {
+    width: 90%;
+    height: auto;
+  }
+
+  .deal-card.small {
+    width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links div {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns on small screens */
+    gap: 1rem;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+}
