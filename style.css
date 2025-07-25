@@ -252,6 +252,21 @@ nav .cart {
   padding: 3rem 1rem;
 }
 
+.deals-section h2 {
+  font-size: 2rem;
+}
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.deals-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
 .deals-layout {
   display: flex;
   gap: 1.5rem;
@@ -260,15 +275,29 @@ nav .cart {
   justify-content: center;
 }
 
+.left-deals {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.right-deals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .deal-card {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  max-width: 350px;
 }
 
 .deal-card img {
   width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
 .deal-text {
@@ -279,10 +308,21 @@ nav .cart {
   text-shadow: 1px 1px 3px black;
 }
 
+.deal-text h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.deal-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
 .large {
   width: 350px;
-  height: auto;
 }
+
 
 
 /* === NEWSLETTER SECTION === */
