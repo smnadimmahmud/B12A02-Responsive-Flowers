@@ -23,68 +23,28 @@ a {
   color: #ff6600;
 }
 
-/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.2rem;
-  background-color: #f8f9fc;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  flex-wrap: wrap;
+  padding: 20px 60px;
+  background-color: #f6f9fe;
 }
 
 .logo {
-  width: 120px;
-  height: auto;
+  height: 50px;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Navigation links (hidden by default for mobile) */
-.nav-links {
-  display: none;
-}
-
-.cart {
-  font-size: 1rem;
+nav a {
+  margin: 0 15px;
   font-weight: 500;
-  color: #000;
+  font-size: 16px;
 }
 
 nav .cart {
   font-weight: bold;
 }
 
-/* Desktop Navigation */
-@media (min-width: 768px) {
-  .navbar {
-    padding: 1rem 3rem;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
-
-  .cart {
-    font-size: 1.1rem;
-  }
-}
-
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -114,7 +74,6 @@ nav .cart {
   max-width: 100%;
 }
 
-/* Products Section */
 .products {
   text-align: center;
   padding: 60px 40px;
@@ -183,7 +142,6 @@ nav .cart {
   background-color: #e65400;
 }
 
-/* Flower Lover Section */
 .flower-lover {
   padding: 60px;
   background-color: #f6f9fe;
@@ -280,7 +238,6 @@ nav .cart {
   color: #eaeaea;
 }
 
-/* Deals Section */
 .deals-section {
   text-align: center;
   padding: 3rem 1rem;
@@ -293,7 +250,7 @@ nav .cart {
 }
 
 .deals-section .highlight {
-  color: #f26522;
+  color: #f26522; /* Orange highlight */
 }
 
 .deals-section p {
@@ -358,7 +315,6 @@ nav .cart {
   text-decoration: underline;
 }
 
-/* Large Zabo Card */
 .deal-card.large {
   width: 680px;
   height: 340px;
@@ -378,7 +334,6 @@ nav .cart {
   font-size: 1.1rem;
 }
 
-/* Newsletter Section */
 .newsletter {
   position: relative;
   margin-top: 60px;
@@ -431,7 +386,6 @@ nav .cart {
   cursor: pointer;
 }
 
-/* Footer */
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -478,8 +432,7 @@ footer {
   width: 30px;
   height: 30px;
 }
-
-/* ========== RESPONSIVENESS ========== */
+/* ===================== RESPONSIVENESS ===================== */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -514,6 +467,10 @@ footer {
     height: auto;
   }
 
+  .deal-card.small {
+    width: 90%;
+  }
+
   footer {
     flex-direction: column;
     align-items: center;
@@ -530,22 +487,13 @@ footer {
     text-align: center;
   }
 }
-
 @media (max-width: 600px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns on small screens */
     gap: 1rem;
   }
 
   .product-card {
     max-width: 100%;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-right {
-    justify-content: flex-end;
   }
 }
